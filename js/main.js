@@ -35,6 +35,19 @@ findLongestWord("hello world javascript frontend");
 
 console.log("-------------------------------------");
 
+function formatString(string) {
+    if (string.length <= 40) {
+        return string;
+    } else {
+        return string.slice(0, 40) + "...";
+    }
+}
+
+console.log(formatString("Short string"));
+console.log(formatString("This is a very long string that should be cut off at 40 characters because it is too long."));
+
+console.log("-------------------------------------");
+
 function checkForSpam(message) {
     if (
         message.toLowerCase().includes("spam") ||
